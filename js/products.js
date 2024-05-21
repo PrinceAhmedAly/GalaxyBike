@@ -1,65 +1,4 @@
 
-// data filter 
-
-/*
-const filterBtns = document.querySelectorAll(".link");
-const storeProducts = document.querySelectorAll(".bike-card");
-
-
-// loop throw btns
-for (i = 0; i < filterBtns.length; i++) {
-
-    filterBtns[i].addEventListener("click", (e) => {
-        const filter = e.target.dataset.filter;
-        +
-
-            // Remove "active" class from all buttons
-            filterBtns.forEach(btn => {
-                btn.classList.remove("active");
-            });
-
-        // Add "active" class to the clicked button
-        e.target.classList.add("active");
-
-        // console.log(filter);
-
-        storeProducts.forEach((product) => {
-            if (filter == "all") {
-                product.style.display = "block";
-            } else {
-                if (product.classList.contains(filter)) {
-                    product.style.display = "block";
-                } else {
-                    product.style.display = "none";
-                }
-            }
-        })
-    })
-};
-
-*/
-
-
-// search bar
-
-// const search = document.getElementById("search");
-
-// search.addEventListener("keyup", (e) => {
-//     e.preventDefault();
-
-//     const searchValue = search.value.toLowerCase().trim();
-//     for (i=0; i < storeProducts.length; i++) {
-//         if (storeProducts[i].classList.contains(searchValue)) {
-//             storeProducts[i].style.display= "block";
-//         } else if (searchValue == "") {
-//             storeProducts[i].style.display= "block";
-//         } else {
-//             storeProducts[i].style.display= "none";
-//         }
-//     }
-// })
-
-
 // search bar btn
 function filterProducts() {
     var searchTerm = document.getElementById('search').value.toLowerCase();
@@ -188,7 +127,9 @@ function addToCart(name, image, price) {
             <h3>${name}</h3>
             <span class="price">${price}$</span>
         </div>
-        <span class="itemRemove" onclick="removeCartItem(this)">X</span>
+        <span class="itemRemove" onclick="removeCartItem(this)">
+        <i class="fa-solid fa-xmark"></i>
+        </span>
     `;
     cartItemsContainer.appendChild(cartItem);
 
@@ -200,6 +141,14 @@ function addToCart(name, image, price) {
 
     // Update the total quantity
     updateTotalQuantity()
+
+    Swal.fire({
+        icon: 'success',
+        title: 'Added to Cart!',
+        text: `${name} has been added to the cart successfully!`,
+        showConfirmButton: false,
+        timer: 1500
+    });
 }
 
 
@@ -219,6 +168,14 @@ function removeCartItem(button) {
 
     // Update the total price after removing the item
     updateTotalPrice();
+
+    Swal.fire({
+        icon: 'success',
+        title: 'Removed From Cart!',
+        text: `${name} has been added to the cart successfully!`,
+        showConfirmButton: false,
+        timer: 1500
+    });
 }
 
 
