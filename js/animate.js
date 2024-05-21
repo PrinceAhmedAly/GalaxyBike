@@ -1,5 +1,14 @@
-// silder functionality 
 
+document.addEventListener("DOMContentLoaded", function() {
+    let loader = document.getElementById("loader");
+    let content = document.getElementById("content");
+    
+    loader.style.display = "none";
+    content.style.display = "block";
+});
+
+
+// silder functionality 
 let currentSlide = 0;
 const slider = document.getElementById('slider');
 const indicators = document.querySelectorAll('.indicator');
@@ -29,21 +38,3 @@ function prevSlide() {
 }
 
 setInterval(nextSlide, 5000); // Auto slide every 5 seconds
-
-// scorlling events animation
-
-// let lastScrollTop = 0;
-
-// window.addEventListener("scroll", function () {
-//   const st = window.scrollY;
-
-//   if (st > lastScrollTop) {
-//     // Scrolling down
-//     document.querySelector('.road .left h2').style.animationDirection = 'normal';
-//   } else {
-//     // Scrolling up
-//     document.querySelector('.road .left h2').style.animationDirection = 'reverse';
-//   }
-
-//   lastScrollTop = st;
-// });

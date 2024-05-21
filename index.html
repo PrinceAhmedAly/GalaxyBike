@@ -1,259 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Galaxy Bike Store</title>
     <!-- Discription -->
-    <meta name="discription" content="Galaxy store web site for selling galaxy bikes for all types">
+    <meta
+      name="discription"
+      content="Galaxy store web site for selling galaxy bikes for all types"
+    />
     <!-- normalize elements -->
-    <link rel="stylesheet" href="css/Normalize.css">
+    <link rel="stylesheet" href="css/Normalize.css" />
     <!-- style file -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animate.css" />
     <!-- font awesome -->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<body>
-    <div class="landing">
-
+  <body>
+    <div id="loader"></div>
+    <div class="wrapper" id="content">
+      <div class="landing">
         <div class="main-slider">
+          <div id="slider">
+            <div class="slide">
+              <img src="imgs/silder-img1.png" alt="Image 1" />
 
-            <div id="slider">
-                <div class="slide">
-                    <img src="imgs/silder-img1.png" alt="Image 1">
+              <div class="title">
+                <h3>GALAXY</h3>
+                <h1>
+                  Everything you need
+                  <br />
+                  is your Road
+                </h1>
+              </div>
 
-                    <div class="title">
-                        <h3>GALAXY</h3>
-                        <h1>
-                            Everything you need
-                            <br>
-                            is your Road
-                        </h1>
-                    </div>
-
-                    <a href="prouducts.html">Reach our Products</a>
-                </div>
-                <div class="slide">
-                    <img src="imgs/slider-img2.png" alt="Image 2">
-
-                    <div class="title">
-                        <h3>GALAXY</h3>
-                        <h1>
-                            All you can reach
-                            <br>
-                            is your World
-                        </h1>
-                    </div>
-
-                    <a href="prouducts.html">Reach our Products</a>
-                </div>
-
+              <a href="prouducts.html">Reach our Products</a>
             </div>
+            <div class="slide">
+              <img src="imgs/slider-img2.png" alt="Image 2" />
 
-            <div id="indicators">
-                <div class="indicator" onclick="changeSlide(0)"></div>
-                <div class="indicator" onclick="changeSlide(1)"></div>
+              <div class="title">
+                <h3>GALAXY</h3>
+                <h1>
+                  All you can reach
+                  <br />
+                  is your World
+                </h1>
+              </div>
+
+              <a href="prouducts.html">Reach our Products</a>
             </div>
+          </div>
 
+          <div id="indicators">
+            <div class="indicator" onclick="changeSlide(0)"></div>
+            <div class="indicator" onclick="changeSlide(1)"></div>
+          </div>
         </div>
 
         <header>
-            <div class="container">
-                <nav class="flex">
-                    <div class="logo">
-                        <h1>
-                            <a href="index.html">GALAXY</a>
-                        </h1>
-                    </div>
+          <div class="container">
+            <nav class="flex">
+              <div class="logo">
+                <h1>
+                  <a href="index.html">GALAXY</a>
+                </h1>
+              </div>
 
-                    <div class="links flex">
-                        <ul class="flex">
-                            <li>
-                                <a href="index.html">Home</a>
-                            </li>
+              <div class="links flex">
+                <ul class="flex">
+                  <li>
+                    <a href="index.html">Home</a>
+                  </li>
 
-                            <li>
-                                <a href="#">About</a>
-                            </li>
+                  <li>
+                    <a href="#">About</a>
+                  </li>
 
-                            <li>
-                                <a href="prouducts.html">products</a>
-                            </li>
+                  <li>
+                    <a href="prouducts.html">products</a>
+                  </li>
 
-                            <li>
-                                <a href="#">Info Center</a>
-                            </li>
+                  <li>
+                    <a href="#">Info Center</a>
+                  </li>
 
-                            <li>
-                                <a href="#footer">Contact</a>
-                            </li>
-                        </ul>
+                  <li>
+                    <a href="#footer">Contact</a>
+                  </li>
+                </ul>
 
-                        <div class="btns">
-                            <button class="login" id="loginBtn">Login</button>
-                        </div>
-                    </div>
-
-                </nav>
-            </div>
+                <div class="btns">
+                  <button class="login" id="loginBtn">Login</button>
+                </div>
+              </div>
+            </nav>
+          </div>
         </header>
+      </div>
 
+      <!-- about us -->
 
-    </div>
-
-    <!-- about us -->
-
-    <section class="about flex">
+      <section class="about flex">
         <div class="left">
-            <h3>
-                We Provide High-Quality Bicycles As Well As OEM & ODM Service
-            </h3>
+          <h3>We Provide High-Quality Bicycles As Well As OEM & ODM Service</h3>
         </div>
 
         <div class="right flex">
-            <h1>2013</h1>
+          <h1>2013</h1>
         </div>
-    </section>
+      </section>
 
-    <section class="info">
+      <section class="info">
         <div class="main-info container">
+          <div class="content flex">
+            <h2>
+              Embrace Nature
+              <br />
+              And Feel The True Self
+            </h2>
+            <p>
+              With about 300 skilled staff,including 20 middle and high-level
+              technicians, we are embracing an elegant office environment and
+              new standardized factory for more than 20,000 ㎡.
+            </p>
 
-            <div class="content flex">
-                <h2>
-                    Embrace Nature
-                    <br>
-                    And Feel The True Self
-                </h2>
-                <p>
-                    With about 300 skilled staff,including 20 middle and high-level technicians, we are embracing an
-                    elegant office environment and new standardized factory for more than 20,000 ㎡.
-                </p>
-
-                <button>Know More</button>
-            </div>
-
+            <button>Know More</button>
+          </div>
         </div>
-    </section>
-    <!-- products show -->
+      </section>
+      <!-- products show -->
 
-    <section class="products">
+      <section class="products">
         <h2>Our Products</h2>
         <div class="container">
-            <div class="road">
-
-                <div class="left">
-                    <img src="imgs/road-bg.png" alt="">
-                    <h2>Road Bike</h2>
-                </div>
-
-                <div class="right">
-                    <h2>Road Bike</h2>
-                    <img src="imgs/road.png" alt="">
-                </div>
-
+          <div class="road">
+            <div class="left">
+              <img src="imgs/road-bg.png" alt="" />
+              <h2>Road Bike</h2>
             </div>
 
-            <div class="electrical">
+            <div class="right">
+              <h2>Road Bike</h2>
+              <img src="imgs/road.png" alt="" />
+            </div>
+          </div>
 
-                <div class="left">
-                    <h2>Electrical</h2>
-                    <img src="imgs/electric.png" alt="">
-                </div>
-
-                <div class="right">
-                    <img src="imgs/electrical.png" alt="">
-                    <h2>Electrical</h2>
-
-                </div>
-
+          <div class="electrical">
+            <div class="left">
+              <h2>Electrical</h2>
+              <img src="imgs/electric.png" alt="" />
             </div>
 
-            <div class="road third">
-
-                <div class="left">
-                    <img src="imgs/mountain-bg.png" alt="">
-                    <h2>Mountain</h2>
-                </div>
-
-                <div class="right">
-                    <h2>Mountain</h2>
-                    <img src="imgs/mountain.png" alt="">
-
-                </div>
-
+            <div class="right">
+              <img src="imgs/electrical.png" alt="" />
+              <h2>Electrical</h2>
             </div>
+          </div>
+
+          <div class="road third">
+            <div class="left">
+              <img src="imgs/mountain-bg.png" alt="" />
+              <h2>Mountain</h2>
+            </div>
+
+            <div class="right">
+              <h2>Mountain</h2>
+              <img src="imgs/mountain.png" alt="" />
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- about us section -->
+      <!-- about us section -->
 
-    <section class="contact-us">
-
+      <section class="contact-us">
         <div class="container">
-            <div class="contact-title">
-                <h3>
-                    Accompany You Through Thousands Of Mountains And Rivers
-                </h3>
+          <div class="contact-title">
+            <h3>Accompany You Through Thousands Of Mountains And Rivers</h3>
 
-                <p>
-                    We will keep offering the most competitive product,the most popular design,the first class
-                    after-sale service. We are dedicated to be your most loyal and reliable supplier.
-                </p>
+            <p>
+              We will keep offering the most competitive product,the most
+              popular design,the first class after-sale service. We are
+              dedicated to be your most loyal and reliable supplier.
+            </p>
 
-                <button>
-                    Contact Us
-                </button>
+            <button>Contact Us</button>
 
-                <img src="imgs/contact.png" alt="">
-            </div>
+            <img src="imgs/contact.png" alt="" />
+          </div>
         </div>
+      </section>
 
-    </section>
-
-    <!-- footer -->
-    <footer id="footer">
+      <!-- footer -->
+      <footer id="footer">
         <div class="container footer-wrap flex">
-            <div class="subscribe">
-                <h3>Get in touch</h3>
-                <p>Subscribe To Our Latest Product Information</p>
-                <div class="email flex">
-                    <input type="text" name="" id="" placeholder="Email">
-                    <button>subscribe</button>
-                </div>
+          <div class="subscribe">
+            <h3>Get in touch</h3>
+            <p>Subscribe To Our Latest Product Information</p>
+            <div class="email flex">
+              <input type="text" name="" id="" placeholder="Email" />
+              <button>subscribe</button>
             </div>
+          </div>
 
-            <div class="hotline">
-                <span>Hotline</span>
-                <br>
-                <a href="tel:4008-228-268">
-                    4008-228-268
-                </a>
+          <div class="hotline">
+            <span>Hotline</span>
+            <br />
+            <a href="tel:4008-228-268"> 4008-228-268 </a>
 
-                <div class="mail">
-                    <span>Email</span>
-                    <br>
-                    <a href="mailto:Leo@galaxybicycle.com">Leo@galaxybicycle.com</a>
-                    <br>
-                    <a href="mailto:Aman@galaxybicycle.com">Aman@galaxybicycle.com</a>
-                </div>
+            <div class="mail">
+              <span>Email</span>
+              <br />
+              <a href="mailto:Leo@galaxybicycle.com">Leo@galaxybicycle.com</a>
+              <br />
+              <a href="mailto:Aman@galaxybicycle.com">Aman@galaxybicycle.com</a>
             </div>
+          </div>
         </div>
 
         <div class="author">
-            <p>Made By
-                <a href="#">Dreamer</a>
-            </p>
+          <p>
+            Made By
+            <a href="#">Dreamer</a>
+          </p>
         </div>
-
-    </footer>
+      </footer>
+    </div>
     <script src="js/animate.js"></script>
     <script src="js/products.js"></script>
-</body>
-
+  </body>
 </html>
