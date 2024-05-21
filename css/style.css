@@ -1,0 +1,767 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* most used classes */
+
+.flex {
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* container set */
+.container {
+    width: 90%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.landing {  
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+header {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    color: #FFF;
+}
+
+header nav {
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+header nav .logo {
+    width: 40%;
+}
+
+header nav .logo h1 a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+header nav .links {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav .links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+header nav .links ul li {
+    margin-right: 10px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .links ul li a {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 20px;
+    transition: .5s;
+}
+
+header nav .links ul li a:hover {
+    color:  #94B618;
+}
+
+header nav .links .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .links .btns .login {
+    width: 80px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    color: #FFF;
+    background-color: #94B618;
+    position: relative;
+    cursor: pointer;
+}
+
+
+header nav .links .cart-btn {
+    font-size: 1.5rem;
+    color: #94B618;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 20px;
+    position: relative;
+}
+
+header nav .links .cart {
+    font-size: 1.5rem;
+    color: #94B618;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+/* new styles for cart */
+header nav .links .cart-btn .totalQuantity {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #747868;
+    border-radius: 50%;
+    font-size: large;
+    color: #FFF;
+}
+
+/* cart styles */
+.landing .cart {
+    position: absolute;
+    position: relative;
+    position: fixed;
+    right: -400px;
+    /* right: 0; */
+    width: 400px;
+    height: 100vh;
+    z-index: 3;
+    background-color: #f6f1f1;
+    transition: .5s;
+    padding: 20px 0;
+}
+
+.landing .cart h2 {
+    padding-left: 15px;
+}
+
+.cart #closeBtn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 1.5rem;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.cart #closeBtn:hover {
+    color: red;
+}
+
+.cart .checkOut {
+    width: 100%;
+    height: 50px;
+    background-color: #94B618;
+    position: absolute;
+    bottom: 0;
+}
+
+.cart .checkOut button {
+    width: 50%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.cart .checkOut button:first-child {
+    background-color: #94B618;
+    color: #FFF;
+    border: none;
+}
+.cart .checkOut button:nth-child(2) {
+    background-color: red;
+    color: #FFF;
+    border: none;
+}
+.landing .cart ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.landing .cart ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFF;
+    margin-top: 10px;
+    padding: 10px;
+    transition: .5s;
+    margin-left: 10px;
+    transition: .5s;
+    border: 1px solid transparent;
+
+}
+
+.landing .cart ul li:hover {
+    background-color: #f9f5f5;
+    border: 1px solid #DDD;
+}
+
+.landing .cart ul li img {
+    width: 80px;
+    height: auto;
+}
+
+.landing .cart ul li h2 {
+    font-size: 20px;
+}
+
+.landing .cart ul li span {
+    font-size: 20px;
+    background-color: #94B618;
+    color: #FFF;
+}
+
+.landing .cart ul li .itemRemove {
+    background-color: transparent;
+    color: red;
+    cursor: pointer;
+}
+
+
+/* landing page titles and content */
+
+#slider .slide .title {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    color: #FFF;
+}
+
+#slider .slide .title h1 {
+    font-size: 5rem;
+}
+
+#slider .slide a {
+    display: block;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    color: #FFF;
+    text-decoration: none;
+    transition: .5s;
+}
+
+#slider .slide a:hover {
+    color: #94B618;
+}
+
+
+/* about */
+
+.about {
+    height: 500px;
+}
+
+.about .left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .left h3 {
+    font-size: 1.9rem;
+    padding: 50px;
+    width: 70%;
+}
+
+.about .right {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.about .right h1 {
+    font-size: 20rem;
+    display: inline;
+    color: #D6CEB8;
+    position: relative;
+}
+
+.about .right h1::before {
+    content: 'Since';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    font-size: 1.2rem;
+    color: rgb(0, 0, 0);
+}
+
+.info {
+    height: 600px;
+    background-image: url(../imgs/c-img-1.png);
+}
+
+.main-info {
+    height: 100%;
+}
+
+.main-info .content{
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    color: #FFF;
+    justify-content: center;
+    align-items: flex-start;
+}
+.main-info .content h2 {
+    font-size: 2rem;
+}
+
+.main-info .content p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    width: 80%;
+}
+
+.main-info .content button {
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    color: #FFF;
+    border: 1px solid #D6CEB8;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 5px;
+}
+
+.main-info .content button:hover {
+    border: 1px solid #D6CEB8;
+    background-color: #ffffff23;
+    color: #D6CEB8;
+}
+
+
+/* products section */
+
+.products {
+    height: auto;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    /* overflow: hidden; */
+}
+.products h2 {
+    font-size: 2.2rem;
+}
+
+.road {
+    position: relative;
+    display: flex;
+    height: 500px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.road .right {
+    width: 50%;
+    position: relative;
+}
+
+.road .right h2 {
+    position: absolute;
+    top: 20%;
+    left: -15%;
+}
+
+.products .road .right img {
+    position: absolute;
+    left: -100px;
+    bottom: 0;
+    width: 700px;
+    height: 420px;
+}
+
+.road .left {
+    width: 50%;
+    position: relative;
+}
+
+.road .left img {
+    width: 60%;
+    height: 100%;
+}
+
+/* animation for big title */
+
+@keyframes move {
+    from {
+      left: 10%;
+    }
+    to {
+      left: 30%;
+    }
+  }
+
+  @keyframes electricMove {
+    from {
+      left: -100%;
+    }
+    to {
+      left: -70%;
+    }
+  }
+
+
+.road .left h2 {
+    position: absolute;
+    width: 200%;
+    top: 30%;
+    left: 10%;
+    color: #d6ceb875;
+    font-size: 12rem;
+    animation: move 5s linear infinite alternate;
+}
+
+.electrical {
+    position: relative;
+    display: flex;
+    height: 500px;
+    margin-top: 20px;
+    overflow: hidden;
+    margin-top: 50px;   
+}
+
+.electrical .left {
+    width: 50%;
+    position: relative;
+}
+.electrical .left h2 {
+    position: absolute;
+    top: 20%;
+    right: -15%;
+}
+
+.electrical .left img {
+    position: absolute;
+    right: -100px;
+    bottom: 0;
+    width: 700px;
+    height: 420px;
+    transform: scaleX(-1);
+}
+
+
+.electrical .right {
+    width: 50%;
+    position: relative;
+}
+
+.electrical .right h2 {
+    position: absolute;
+    width: 200%;
+    top: 30%;
+    left: -100%;
+    color: #d6ceb875;
+    font-size: 12rem;
+    animation: electricMove 5s linear infinite alternate;
+
+}
+
+.electrical .right img {
+    width: 60%;
+    height: 100%;
+}
+
+.third {
+    margin-top: 50px;
+}
+
+/* end of products section */
+/* starts contact styles */
+.contact-us {
+    height: 600px;
+    margin-top: 80px;
+}
+
+.contact-title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    height: 600px;
+}
+
+.contact-title img {
+    position: absolute;
+    right: 0;
+    top: -150px;
+    width: 600px;
+    height: auto;
+}
+
+.contact-title h3 {
+    font-size: 2.2rem;
+    width: 30%;
+}
+
+.contact-title p {
+    width: 30%;
+    margin-top: 50px;
+}
+
+.contact-title button {
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #94B618;
+    border-left: 1px solid #94B618;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    cursor: pointer;
+    transition: border .5s;
+}
+
+.contact-title button:hover {
+    border: 1px solid #94B618;
+}
+/* end contact styles */
+
+/* footer styles */
+footer {
+    height: 450px;
+    margin-top: 50px;
+    background-color: #f8f4e9;
+    position: relative;
+}
+
+/* .footer-wrap {
+} */
+
+.subscribe,
+.hotline {
+    height: 100%;
+    width: 35%;
+    padding-top: 100px;
+}
+
+.subscribe h3 {
+    font-size: 2.5rem;
+}
+.subscribe p {
+    font-size: 1.4rem;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.subscribe .email {
+    margin-top: 20px;
+}
+
+.email input[type=text] {
+    width: 250px;
+    height: 40px;
+    border: none;
+    padding-left: 10px;
+    border-bottom: 1px solid #94B618;
+    background-color: #f8f4e9;
+}
+
+.email input[type=text]:focus {
+    outline: none;
+}
+
+.email button {
+    width: 100px;
+    background-color: #747868;
+    color: #FFF;
+    border: none;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.subscribe .email:hover button {
+    background-color: #94B618;
+}
+
+/* right side */
+.hotline span {
+    font-size: 1.1rem;
+}
+
+.hotline a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #747868;
+
+}
+
+.hotline a:first-child {
+    color: #000000;
+}
+
+.hotline .mail {
+    margin-top: 10px;
+}
+
+.author {
+    text-align: center;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+}
+
+/* login form styles */
+.login-form {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../imgs/welcome.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.login {
+    width: 900px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px #f8f4e9;
+    overflow: hidden;
+}
+
+.login h2 {
+    width: 80%;
+    font-size: 2rem;
+}
+
+.login h3 {
+    font-size: 1.5rem;
+}
+
+.login form {
+    width: 100%;
+}
+
+.login form input {
+    width: 80%;
+    height: 40px;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.login form input:focus {
+    outline: none;
+}
+
+.login form input[type=submit] {
+    color: #FFF;
+    background-color: #94B618;
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.login form input[type=submit]:hover {
+    color: #94B618;
+    background-color: #FFF;
+    border: 1px solid #94B618;
+}
+
+.login .inputs {
+    width: 50%;
+    height: 100%;
+    background-color: #FFF;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px 0px 0 40px;
+    position: relative;
+}
+
+.inputs .or {
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #FFF;
+    border-radius: 50%;
+    font-size: 2rem;
+    box-shadow: 3px 3px 10px #D6CEB8;
+}
+
+.inputs .social-login {
+    width: 100%;
+
+}
+.inputs .social-login  {
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.inputs .social-login  a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+}
+
+.inputs .social-login  a i {
+    font-size: 2rem;
+}
+.login .welcomeImg {
+    width: 50%;
+    height: 100%;
+    background-color: #FFF;
+    border-left: 1px solid #DDD;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px 0px 0 40px;
+}
+
+.welcomeImg .social-login {
+    width: 100%;
+
+}
+.welcomeImg .social-login  {
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.welcomeImg .social-login  a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+}
+
+.welcomeImg .social-login  a i {
+    font-size: 2rem;
+}

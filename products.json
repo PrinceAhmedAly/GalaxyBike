@@ -1,0 +1,57 @@
+[
+    {
+      "name": "Rl500",
+      "image": "imgs/rl500.png",
+      "price": 19.99,
+      "type": "road"
+    },
+    {
+      "name": "Rl600",
+      "image": "imgs/rl600.png",
+      "price": 29.99,
+      "type": "road"
+    },
+    {
+      "name": "Rl800",
+      "image": "imgs/rl800.png",
+      "price": 24.99,
+      "type": "road"
+    },
+    {
+      "name": "X11",
+      "image": "imgs/x11.png",
+      "price": 34.99,
+      "type": "mountain"
+    },
+    {
+      "name": "XC30",
+      "image": "imgs/xc30.png",
+      "price": 39.99,
+      "type": "mountain"
+    },
+    {
+      "name": "XC90",
+      "image": "imgs/xc90.png",
+      "price": 49.99,
+      "type": "mountain"
+    },
+    {
+      "name": "B050E",
+      "image": "imgs/B050E.png",
+      "price": 44.99,
+      "type": "electric"
+    },
+    {
+      "name": "B080E",
+      "image": "imgs/B080E.png",
+      "price": 54.99,
+      "type": "electric"
+    },
+    {
+      "name": "B100E",
+      "image": "imgs/B100E.png",
+      "price": 59.99,
+      "type": "electric"
+    }
+  ]
+  
