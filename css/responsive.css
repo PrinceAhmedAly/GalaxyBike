@@ -1,21 +1,107 @@
+header nav .links {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  .hidden {
+    opacity: 0;
+
+  }
+
 /* small */
 @media (min-width: 768px) {
     .container {
-        width: 100%;
+      width: 100%;
     }
-}
-
-/* medium */
-@media (min-width: 992px) {
+    .mobile-nav {
+        display: block;
+      }
+  }
+  
+  /* medium */
+  @media (min-width: 992px) {
     .container {
-        width: 970px;
+      width: 970px;
     }
-}
+    /* responsive navbar */
+    header nav .links {
+      display: none;
+    }
+      .mobile-links ul li {
+        width: 150px;
+      }
 
-/*large */
-
-@media (min-width: 1200px) {
+      #slider .slide .title h1 {
+        font-size: 5rem;
+    }
+    .mobile-links ul {
+        flex-direction: row;
+    }
+    .about .left {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .about .left h3 {
+        font-size: 1.9rem;
+        padding: 50px;
+        /* width: 70%; */
+    }
+    
+    .about .right {
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 200px;
+    }
+    
+    .about .right h1 {
+        font-size: 17rem;
+        display: inline;
+        color: #D6CEB8;
+        position: relative;
+    }
+    .info {
+        height: 600px;
+        background-image: url(../imgs/c-img-1.png);
+    }
+    
+    
+    .main-info .content{
+        width: 50%;
+        height: 100%;
+        flex-direction: column;
+        color: #FFF;
+        justify-content: center;
+        align-items: flex-start;
+    }
+  }
+  
+  /* large */
+  @media (min-width: 1200px) {
     .container {
-        width: 1170px;
+      width: 1170px;
     }
-}
+    /* responsive navbar */
+    header nav .links {
+      display: flex;
+    }
+    .mobileNavBtn {
+        display: none;
+    }
+      .mobile-links {display: none;}
+
+      .indicator {
+        width: 200px;
+    }
+
+    #indicators {
+        bottom: 10%;
+    }
+  }
+  

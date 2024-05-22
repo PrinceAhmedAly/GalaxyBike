@@ -172,7 +172,7 @@ function removeCartItem(button) {
     Swal.fire({
         icon: 'success',
         title: 'Removed From Cart!',
-        text: `${name} has been added to the cart successfully!`,
+        text: `${name} has been removed from the cart successfully!`,
         showConfirmButton: false,
         timer: 1500
     });

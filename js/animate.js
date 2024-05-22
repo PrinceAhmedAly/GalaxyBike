@@ -1,4 +1,15 @@
 
+// responsive navbar
+const menuBtn = document.getElementById('menuBars');
+const mobileMenu = document.getElementById('mobileMenu');
+
+menuBtn.addEventListener('click', function() {
+
+    mobileMenu.classList.toggle('hidden');
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
     let loader = document.getElementById("loader");
     let content = document.getElementById("content");
@@ -37,4 +48,4 @@ function prevSlide() {
     updateSlider();
 }
 
-setInterval(nextSlide, 5000); // Auto slide every 5 seconds
+const slideChanger = setInterval(nextSlide, 5000); // Auto slide every 5 seconds

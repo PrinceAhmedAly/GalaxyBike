@@ -109,6 +109,77 @@ header nav .links .btns .login {
     cursor: pointer;
 }
 
+/* mobile nav indicator */
+.mobileNavBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.mobileNavBtn:hover i{
+    color: #94B618;
+    transition: .5s;
+}
+
+.mobile-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #DDD; */
+    box-shadow: 3px 3px 10px #EEE;
+    border-radius: 40px;
+    backdrop-filter: blur(5px);
+    transition: .5s linear;
+}
+
+.mobile-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mobile-links ul li {
+    margin: 10px;
+    width: auto;
+}
+
+.mobile-links ul li a {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 20px;
+    transition: .5s;
+}
+
+.mobile-links  ul li a:hover {
+    color:  #94B618;
+}
+
+.mobile-links .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.mobile-links .btns .login {
+    width: 80px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    color: #FFF;
+    background-color: #94B618;
+    position: relative;
+    cursor: pointer;
+}
 
 header nav .links .cart-btn {
     font-size: 1.5rem;
@@ -242,9 +313,7 @@ header nav .links .cart-btn .totalQuantity {
     cursor: pointer;
 }
 
-
 /* landing page titles and content */
-
 #slider .slide .title {
     position: absolute;
     bottom: 20%;
@@ -253,7 +322,7 @@ header nav .links .cart-btn .totalQuantity {
 }
 
 #slider .slide .title h1 {
-    font-size: 5rem;
+    font-size: 3rem;
 }
 
 #slider .slide a {
@@ -276,6 +345,7 @@ header nav .links .cart-btn .totalQuantity {
 
 .about {
     height: 500px;
+    overflow: hidden;
 }
 
 .about .left {
@@ -286,20 +356,20 @@ header nav .links .cart-btn .totalQuantity {
 }
 
 .about .left h3 {
-    font-size: 1.9rem;
-    padding: 50px;
-    width: 70%;
+    font-size: 1rem;
+    padding: 0 20px;
+    text-wrap: wrap;
 }
 
 .about .right {
     width: 50%;
     justify-content: center;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 250px;
 }
 
 .about .right h1 {
-    font-size: 20rem;
+    font-size: 6rem;
     display: inline;
     color: #D6CEB8;
     position: relative;
@@ -309,14 +379,16 @@ header nav .links .cart-btn .totalQuantity {
     content: 'Since';
     position: absolute;
     left: 0;
-    top: 10px;
+    top: -10px;
     font-size: 1.2rem;
     color: rgb(0, 0, 0);
 }
 
+/* info section */
 .info {
     height: 600px;
     background-image: url(../imgs/c-img-1.png);
+    background-position: center;
 }
 
 .main-info {
@@ -324,7 +396,7 @@ header nav .links .cart-btn .totalQuantity {
 }
 
 .main-info .content{
-    width: 50%;
+    width: 74%;
     height: 100%;
     flex-direction: column;
     color: #FFF;
@@ -361,7 +433,6 @@ header nav .links .cart-btn .totalQuantity {
 
 
 /* products section */
-
 .products {
     height: auto;
     width: 100%;
