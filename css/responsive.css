@@ -7,7 +7,7 @@ header nav .links {
   }
 
   .hidden {
-    opacity: 0;
+    opacity: 1;
 
   }
 
@@ -71,7 +71,6 @@ header nav .links {
         background-image: url(../imgs/c-img-1.png);
     }
     
-    
     .main-info .content{
         width: 50%;
         height: 100%;
@@ -79,6 +78,122 @@ header nav .links {
         color: #FFF;
         justify-content: center;
         align-items: flex-start;
+    }
+    
+    .road .right {
+        width: 50%;
+        position: relative;
+    }
+    
+    .road .right h2 {
+        position: absolute;
+        top: 25%;
+        left: -15%;
+    }
+    
+    .products .road .right img {
+        position: absolute;
+        left: -100px;
+        bottom: 0;
+        width: 700px;
+        height: 420px;
+    }
+    
+    .road .left {
+        width: 50%;
+        position: relative;
+    }
+    
+    .road .left img {
+        width: 60%;
+        height: 100%;
+    }
+    
+    .electrical {
+        position: relative;
+        display: flex;
+        height: 500px;
+        margin-top: 20px;
+        overflow: hidden;
+        margin-top: 50px;   
+    }
+    
+    .electrical .left {
+        width: 50%;
+        position: relative;
+    }
+    .electrical .left h2 {
+        position: absolute;
+        top: 20%;
+        right: -15%;
+    }
+    
+    .electrical .left img {
+        position: absolute;
+        right: -100px;
+        bottom: 0;
+        width: 700px;
+        height: 420px;
+        transform: scaleX(-1);
+    }
+    
+    .electrical .right h2 {
+        position: absolute;
+        width: 200%;
+        top: 30%;
+        left: -100%;
+        color: #d6ceb875;
+        font-size: 12rem;
+        animation: electricMove 5s linear infinite alternate;
+    
+    }
+    
+    .electrical .right img {
+        width: 60%;
+        height: 100%;
+    }
+
+    .contact-us {
+        height: 600px;
+        margin-top: 80px;
+    }
+    
+    .contact-title {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        overflow: hidden;
+        height: 600px;
+        background-image: none;
+        color: #000;
+    }
+    
+    .contact-title img {
+        position: absolute;
+        right: 0;
+        top: -150px;
+        width: 600px;
+        height: auto;
+        display: block;
+    }
+    
+    .contact-title h3 {
+        font-size: 2.2rem;
+        width: 30%;
+    }
+    
+    .contact-title p {
+        width: 30%;
+        margin-top: 50px;
+    }
+    
+    footer {
+        height: 450px;
+        margin-top: 50px;
+        background-color: #f8f4e9;
+        position: relative;
     }
   }
   
@@ -102,6 +217,123 @@ header nav .links {
 
     #indicators {
         bottom: 10%;
+    }
+    
+    .road .right {
+        width: 50%;
+        position: relative;
+    }
+    
+    .road .right h2 {
+        position: absolute;
+        top: 20%;
+        left: -15%;
+    }
+    
+    .products .road .right img {
+        position: absolute;
+        left: -100px;
+        bottom: 0;
+        width: 700px;
+        height: 420px;
+    }
+    
+    .road .left {
+        width: 50%;
+        position: relative;
+    }
+    
+    .road .left img {
+        width: 60%;
+        height: 100%;
+    }
+       
+    .road .left h2 {
+        position: absolute;
+        width: 200%;
+        top: 30%;
+        left: 10%;
+        color: #d6ceb875;
+        font-size: 12rem;
+        animation: move 5s linear infinite alternate;
+    }
+    
+    .electrical {
+        position: relative;
+        display: flex;
+        height: 500px;
+        margin-top: 20px;
+        overflow: hidden;
+        margin-top: 50px;   
+    }
+    
+    .electrical .left {
+        width: 50%;
+        position: relative;
+    }
+    .electrical .left h2 {
+        position: absolute;
+        top: 20%;
+        right: -15%;
+    }
+    
+    .electrical .left img {
+        position: absolute;
+        right: -100px;
+        bottom: 0;
+        width: 700px;
+        height: 420px;
+        transform: scaleX(-1);
+    }
+    
+    
+    .electrical .right h2 {
+        position: absolute;
+        width: 200%;
+        top: 30%;
+        left: -100%;
+        color: #d6ceb875;
+        font-size: 12rem;
+        animation: electricMove 5s linear infinite alternate;
+    
+    }
+    
+    .electrical .right img {
+        width: 60%;
+        height: 100%;
+    }
+    
+    .contact-us {
+        height: 600px;
+        margin-top: 80px;
+    }
+    
+    .contact-title {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        overflow: hidden;
+        height: 600px;
+    }
+    
+    .contact-title img {
+        position: absolute;
+        right: 0;
+        top: -150px;
+        width: 600px;
+        height: auto;
+    }
+    
+    .contact-title h3 {
+        font-size: 2.2rem;
+        width: 30%;
+    }
+    
+    .contact-title p {
+        width: 30%;
+        margin-top: 50px;
     }
   }
   
