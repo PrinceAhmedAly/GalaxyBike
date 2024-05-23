@@ -109,7 +109,7 @@ header nav .links .btns .login {
     cursor: pointer;
 }
 
-/* mobile nav indicator */
+/* mobile nav btn */
 .mobileNavBtn {
     position: absolute;
     top: 20px;
@@ -134,7 +134,8 @@ header nav .links .btns .login {
     border-radius: 40px;
     backdrop-filter: blur(5px);
     transition: .5s linear;
-    opacity: 0;
+    display: none;
+    padding: 7px 0;
 }
 
 .mobile-links ul {
@@ -314,37 +315,11 @@ header nav .links .cart-btn .totalQuantity {
     cursor: pointer;
 }
 
-/* landing page titles and content */
-#slider .slide .title {
-    position: absolute;
-    bottom: 20%;
-    left: 10%;
-    color: #FFF;
-}
-
-#slider .slide .title h1 {
-    font-size: 3rem;
-}
-
-#slider .slide a {
-    display: block;
-    text-transform: uppercase;
-    position: absolute;
-    bottom: 10%;
-    right: 10%;
-    color: #FFF;
-    text-decoration: none;
-    transition: .5s;
-}
-
-#slider .slide a:hover {
-    color: #94B618;
-}
 
 
 /* about */
 .about {
-    height: 500px;
+    height: auto;
     overflow: hidden;
 }
 
@@ -365,7 +340,7 @@ header nav .links .cart-btn .totalQuantity {
     width: 50%;
     justify-content: center;
     align-items: center;
-    margin-top: 250px;
+    margin-top: 100px;
 }
 
 .about .right h1 {
@@ -466,7 +441,7 @@ header nav .links .cart-btn .totalQuantity {
 
 .products .road .right img {
     position: absolute;
-    left: -100px;
+    left: -150px;
     bottom: 0;
     width: 450px;
     height: auto;
@@ -535,7 +510,7 @@ header nav .links .cart-btn .totalQuantity {
 
 .electrical .left img {
     position: absolute;
-    right: -100px;
+    right: -150px;
     bottom: 0;
     width: 450px;
     height: auto;
@@ -632,19 +607,20 @@ header nav .links .cart-btn .totalQuantity {
 
 /* footer styles */
 footer {
-    height: 450px;
+    height: auto;
     background-color: #f8f4e9;
     position: relative;
 }
 
-/* .footer-wrap {
-} */
+.footer-wrapper {
+    flex-direction: column;
+}
 
 .subscribe,
 .hotline {
     height: 100%;
-    width: 35%;
-    padding-top: 100px;
+    width: 100%;
+    padding-top: 30px;
 }
 
 .subscribe h3 {
@@ -708,11 +684,15 @@ footer {
 
 .author {
     text-align: center;
-    position: absolute;
+    padding: 20px 0;
     bottom: 5px;
     width: 100%;
 }
 
+.author a {
+    text-decoration: none;
+    color: #747868;
+}
 
 /* login form styles */
 .login-form {

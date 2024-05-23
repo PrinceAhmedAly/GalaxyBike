@@ -6,6 +6,12 @@ const mobileMenu = document.getElementById('mobileMenu');
 menuBtn.addEventListener('click', function() {
 
     mobileMenu.classList.toggle('hidden');
+
+    if (mobileMenu.classList.contains('hidden')) {
+        menuBtn.className = 'fa-solid fa-xmark';
+    } else {
+        menuBtn.className = 'fa-solid fa-bars';
+    }
 });
 
 

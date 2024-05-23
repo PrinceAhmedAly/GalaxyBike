@@ -1,51 +1,79 @@
 /* silder styles */
 
 .main-slider {
-    width: 100wh;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
+  width: 100wh;
+  height: 100dvh;
+  overflow: hidden;
+  position: relative;
+}
+
+.main-slider a {
+  display: block;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  color: #FFF;
+  text-decoration: none;
+  transition: .5s;
+}
+
+.main-slider a:hover {
+  color: #94B618;
 }
 
 #slider {
-    display: flex;
-    transition: transform 0.5s ease-out;
-  }
+  display: flex;
+  transition: transform 0.5s ease-out;
+}
 
-  .slide {
-    width: 100%;
-    height: 100vh;
-    flex: 0 0 100%;
-    position: relative;
-  }
+.slide {
+  width: 100%;
+  height: 100vh;
+  flex: 0 0 100%;
+  position: relative;
+}
 
 .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-  #indicators {
-    position: absolute;
-    bottom: 7%;
-    left: 10%;
-    display: flex;
-  }
+#slider .slide .title {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  color: #FFF;
+}
 
-  .indicator {
-    width: 150px;
-    height: 3px;
-    background-color: #333;
-    margin: 0 5px;
-    cursor: pointer;
-  }
+#slider .slide .title h1 {
+  font-size: 3rem;
+}
 
-  .indicator.active {
-    background-color: #888;
-  }
+#indicators {
+  position: absolute;
+  bottom: 5%;
+  /* left: 10%; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.indicator {
+  width: 150px;
+  height: 3px;
+  background-color: #333;
+  margin: 0 5px;
+  cursor: pointer;
+}
 
-  /* Loader Styles */
+.indicator.active {
+  background-color: #888;
+}
+
+/* Loader Styles */
 #loader {
   position: fixed;
   left: 50%;
@@ -61,8 +89,12 @@
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Content Styles */

@@ -1,339 +1,411 @@
 header nav .links {
-    display: none;
-  }
+  display: none;
+}
 
-  .mobile-nav {
-    display: block;
-  }
+.mobile-nav {
+  display: block;
+}
 
-  .hidden {
-    opacity: 1;
-
-  }
+.hidden {
+  display: block;
+}
 
 /* small */
 @media (min-width: 768px) {
-    .container {
-      width: 100%;
-    }
-    .mobile-nav {
-        display: block;
-      }
+  .container {
+    width: 100%;
   }
-  
-  /* medium */
-  @media (min-width: 992px) {
-    .container {
-      width: 970px;
-    }
-    /* responsive navbar */
-    header nav .links {
-      display: none;
-    }
-      .mobile-links ul li {
-        width: 150px;
-      }
-
-      #slider .slide .title h1 {
-        font-size: 5rem;
-    }
-    .mobile-links ul {
-        flex-direction: row;
-    }
-    .about .left {
-        width: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .about .left h3 {
-        font-size: 1.9rem;
-        padding: 50px;
-        /* width: 70%; */
-    }
-    
-    .about .right {
-        width: 50%;
-        justify-content: center;
-        align-items: center;
-        margin-top: 200px;
-    }
-    
-    .about .right h1 {
-        font-size: 17rem;
-        display: inline;
-        color: #D6CEB8;
-        position: relative;
-    }
-    .info {
-        height: 600px;
-        background-image: url(../imgs/c-img-1.png);
-    }
-    
-    .main-info .content{
-        width: 50%;
-        height: 100%;
-        flex-direction: column;
-        color: #FFF;
-        justify-content: center;
-        align-items: flex-start;
-    }
-    
-    .road .right {
-        width: 50%;
-        position: relative;
-    }
-    
-    .road .right h2 {
-        position: absolute;
-        top: 25%;
-        left: -15%;
-    }
-    
-    .products .road .right img {
-        position: absolute;
-        left: -100px;
-        bottom: 0;
-        width: 700px;
-        height: 420px;
-    }
-    
-    .road .left {
-        width: 50%;
-        position: relative;
-    }
-    
-    .road .left img {
-        width: 60%;
-        height: 100%;
-    }
-    
-    .electrical {
-        position: relative;
-        display: flex;
-        height: 500px;
-        margin-top: 20px;
-        overflow: hidden;
-        margin-top: 50px;   
-    }
-    
-    .electrical .left {
-        width: 50%;
-        position: relative;
-    }
-    .electrical .left h2 {
-        position: absolute;
-        top: 20%;
-        right: -15%;
-    }
-    
-    .electrical .left img {
-        position: absolute;
-        right: -100px;
-        bottom: 0;
-        width: 700px;
-        height: 420px;
-        transform: scaleX(-1);
-    }
-    
-    .electrical .right h2 {
-        position: absolute;
-        width: 200%;
-        top: 30%;
-        left: -100%;
-        color: #d6ceb875;
-        font-size: 12rem;
-        animation: electricMove 5s linear infinite alternate;
-    
-    }
-    
-    .electrical .right img {
-        width: 60%;
-        height: 100%;
-    }
-
-    .contact-us {
-        height: 600px;
-        margin-top: 80px;
-    }
-    
-    .contact-title {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        overflow: hidden;
-        height: 600px;
-        background-image: none;
-        color: #000;
-    }
-    
-    .contact-title img {
-        position: absolute;
-        right: 0;
-        top: -150px;
-        width: 600px;
-        height: auto;
-        display: block;
-    }
-    
-    .contact-title h3 {
-        font-size: 2.2rem;
-        width: 30%;
-    }
-    
-    .contact-title p {
-        width: 30%;
-        margin-top: 50px;
-    }
-    
-    footer {
-        height: 450px;
-        margin-top: 50px;
-        background-color: #f8f4e9;
-        position: relative;
-    }
+  .mobile-nav {
+    display: block;
   }
-  
-  /* large */
-  @media (min-width: 1200px) {
-    .container {
-      width: 1170px;
-    }
-    /* responsive navbar */
-    header nav .links {
-      display: flex;
-    }
-    .mobileNavBtn {
-        display: none;
-    }
-      .mobile-links {display: none;}
+}
 
-      .indicator {
-        width: 200px;
-    }
-
-    #indicators {
-        bottom: 10%;
-    }
-    
-    .road .right {
-        width: 50%;
-        position: relative;
-    }
-    
-    .road .right h2 {
-        position: absolute;
-        top: 20%;
-        left: -15%;
-    }
-    
-    .products .road .right img {
-        position: absolute;
-        left: -100px;
-        bottom: 0;
-        width: 700px;
-        height: 420px;
-    }
-    
-    .road .left {
-        width: 50%;
-        position: relative;
-    }
-    
-    .road .left img {
-        width: 60%;
-        height: 100%;
-    }
-       
-    .road .left h2 {
-        position: absolute;
-        width: 200%;
-        top: 30%;
-        left: 10%;
-        color: #d6ceb875;
-        font-size: 12rem;
-        animation: move 5s linear infinite alternate;
-    }
-    
-    .electrical {
-        position: relative;
-        display: flex;
-        height: 500px;
-        margin-top: 20px;
-        overflow: hidden;
-        margin-top: 50px;   
-    }
-    
-    .electrical .left {
-        width: 50%;
-        position: relative;
-    }
-    .electrical .left h2 {
-        position: absolute;
-        top: 20%;
-        right: -15%;
-    }
-    
-    .electrical .left img {
-        position: absolute;
-        right: -100px;
-        bottom: 0;
-        width: 700px;
-        height: 420px;
-        transform: scaleX(-1);
-    }
-    
-    
-    .electrical .right h2 {
-        position: absolute;
-        width: 200%;
-        top: 30%;
-        left: -100%;
-        color: #d6ceb875;
-        font-size: 12rem;
-        animation: electricMove 5s linear infinite alternate;
-    
-    }
-    
-    .electrical .right img {
-        width: 60%;
-        height: 100%;
-    }
-    
-    .contact-us {
-        height: 600px;
-        margin-top: 80px;
-    }
-    
-    .contact-title {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        overflow: hidden;
-        height: 600px;
-    }
-    
-    .contact-title img {
-        position: absolute;
-        right: 0;
-        top: -150px;
-        width: 600px;
-        height: auto;
-    }
-    
-    .contact-title h3 {
-        font-size: 2.2rem;
-        width: 30%;
-    }
-    
-    .contact-title p {
-        width: 30%;
-        margin-top: 50px;
-    }
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
   }
-  
+  /* responsive navbar */
+  header nav .links {
+    display: none;
+  }
+  .mobile-links ul li {
+    width: 150px;
+  }
+
+  #slider .slide .title h1 {
+    font-size: 5rem;
+  }
+  .mobile-links ul {
+    flex-direction: row;
+  }
+  .about {
+    height: 500px;
+    overflow: hidden;
+}
+  .about .left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about .left h3 {
+    font-size: 1.9rem;
+    padding: 50px;
+    /* width: 70%; */
+  }
+
+  .about .right {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+  }
+
+  .about .right h1 {
+    font-size: 17rem;
+    display: inline;
+    color: #d6ceb8;
+    position: relative;
+  }
+  .info {
+    height: 600px;
+    background-image: url(../imgs/c-img-1.png);
+  }
+
+  .main-info .content {
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    color: #fff;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .road .right {
+    width: 50%;
+    position: relative;
+  }
+
+  .road .right h2 {
+    position: absolute;
+    top: 25%;
+    left: -15%;
+  }
+
+  .products .road .right img {
+    position: absolute;
+    left: -100px;
+    bottom: 0;
+    width: 700px;
+    height: 420px;
+  }
+
+  .road .left {
+    width: 50%;
+    position: relative;
+  }
+
+  .road .left img {
+    width: 60%;
+    height: 100%;
+  }
+
+  .electrical {
+    position: relative;
+    display: flex;
+    height: 500px;
+    margin-top: 20px;
+    overflow: hidden;
+    margin-top: 50px;
+  }
+
+  .electrical .left {
+    width: 50%;
+    position: relative;
+  }
+  .electrical .left h2 {
+    position: absolute;
+    top: 20%;
+    right: -15%;
+  }
+
+  .electrical .left img {
+    position: absolute;
+    right: -100px;
+    bottom: 0;
+    width: 700px;
+    height: 420px;
+    transform: scaleX(-1);
+  }
+
+  .electrical .right h2 {
+    position: absolute;
+    width: 200%;
+    top: 30%;
+    left: -100%;
+    color: #d6ceb875;
+    font-size: 12rem;
+    animation: electricMove 5s linear infinite alternate;
+  }
+
+  .electrical .right img {
+    width: 60%;
+    height: 100%;
+  }
+
+  .contact-us {
+    height: 600px;
+    margin-top: 80px;
+  }
+
+  .contact-title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    height: 600px;
+    background-image: none;
+    color: #000;
+  }
+
+  .contact-title img {
+    position: absolute;
+    right: 0;
+    top: -150px;
+    width: 600px;
+    height: auto;
+    display: block;
+  }
+
+  .contact-title h3 {
+    font-size: 2.2rem;
+    width: 30%;
+  }
+
+  .contact-title p {
+    width: 30%;
+    margin-top: 50px;
+  }
+
+  footer {
+    height: 450px;
+    margin-top: 50px;
+    background-color: #f8f4e9;
+    position: relative;
+  }
+
+  .footer-wrapper {
+    flex-direction: row;
+}
+
+  .subscribe,
+  .hotline {
+    height: 100%;
+    width: 50%;
+    padding-top: 100px;
+  }
+
+  .subscribe h3 {
+    font-size: 2.5rem;
+  }
+  .subscribe p {
+    font-size: 1.4rem;
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  .subscribe .email {
+    margin-top: 20px;
+  }
+
+  .email input[type="text"] {
+    width: 250px;
+    height: 40px;
+    border: none;
+    padding-left: 10px;
+    border-bottom: 1px solid #94b618;
+    background-color: #f8f4e9;
+  }
+
+  .email input[type="text"]:focus {
+    outline: none;
+  }
+
+  .email button {
+    width: 100px;
+    background-color: #747868;
+    color: #fff;
+    border: none;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+
+  .subscribe .email:hover button {
+    background-color: #94b618;
+  }
+
+  /* right side */
+  .hotline span {
+    font-size: 1.1rem;
+  }
+
+  .hotline a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #747868;
+  }
+
+  .hotline a:first-child {
+    color: #000000;
+  }
+
+  .hotline .mail {
+    margin-top: 10px;
+  }
+}
+
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+  /* responsive navbar */
+  header nav .links {
+    display: flex;
+  }
+  .mobileNavBtn {
+    display: none;
+  }
+  .mobile-links {
+    display: none;
+  }
+
+  .indicator {
+    width: 200px;
+  }
+
+  #indicators {
+    bottom: 10%;
+    left: 5%;
+    justify-content: left;
+  }
+
+  .road .right {
+    width: 50%;
+    position: relative;
+  }
+
+  .road .right h2 {
+    position: absolute;
+    top: 20%;
+    left: -15%;
+  }
+
+  .products .road .right img {
+    position: absolute;
+    left: -100px;
+    bottom: 0;
+    width: 700px;
+    height: 420px;
+  }
+
+  .road .left {
+    width: 50%;
+    position: relative;
+  }
+
+  .road .left img {
+    width: 60%;
+    height: 100%;
+  }
+
+  .road .left h2 {
+    position: absolute;
+    width: 200%;
+    top: 30%;
+    left: 10%;
+    color: #d6ceb875;
+    font-size: 12rem;
+    animation: move 5s linear infinite alternate;
+  }
+
+  .electrical {
+    position: relative;
+    display: flex;
+    height: 500px;
+    margin-top: 20px;
+    overflow: hidden;
+    margin-top: 50px;
+  }
+
+  .electrical .left {
+    width: 50%;
+    position: relative;
+  }
+  .electrical .left h2 {
+    position: absolute;
+    top: 20%;
+    right: -15%;
+  }
+
+  .electrical .left img {
+    position: absolute;
+    right: -100px;
+    bottom: 0;
+    width: 700px;
+    height: 420px;
+    transform: scaleX(-1);
+  }
+
+  .electrical .right h2 {
+    position: absolute;
+    width: 200%;
+    top: 30%;
+    left: -100%;
+    color: #d6ceb875;
+    font-size: 12rem;
+    animation: electricMove 5s linear infinite alternate;
+  }
+
+  .electrical .right img {
+    width: 60%;
+    height: 100%;
+  }
+
+  .contact-us {
+    height: 600px;
+    margin-top: 80px;
+  }
+
+  .contact-title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    height: 600px;
+  }
+
+  .contact-title img {
+    position: absolute;
+    right: 0;
+    top: -150px;
+    width: 600px;
+    height: auto;
+  }
+
+  .contact-title h3 {
+    font-size: 2.2rem;
+    width: 30%;
+  }
+
+  .contact-title p {
+    width: 30%;
+    margin-top: 50px;
+  }
+}
