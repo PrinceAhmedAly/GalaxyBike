@@ -10,6 +10,7 @@ header nav .links {
   display: block;
 }
 
+
 /* small */
 @media (min-width: 768px) {
   .container {
@@ -192,7 +193,7 @@ header nav .links {
   }
 
   footer {
-    height: 450px;
+    height: auto;
     margin-top: 50px;
     background-color: #f8f4e9;
     position: relative;
@@ -266,6 +267,25 @@ header nav .links {
   .hotline .mail {
     margin-top: 10px;
   }
+
+  .product-title {
+    position: absolute;
+    left: 4%;
+    bottom: 30%;
+    color: #FFF;
+}
+
+header nav .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 45%;
+}
+
+.navlinks {
+    width: 800px;
+}
+
 }
 
 /* large */
@@ -379,6 +399,7 @@ header nav .links {
   .contact-us {
     height: 600px;
     margin-top: 80px;
+    padding: 0 50px;
   }
 
   .contact-title {
@@ -409,3 +430,4 @@ header nav .links {
     margin-top: 50px;
   }
 }
+

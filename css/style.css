@@ -42,6 +42,7 @@ header {
     top: 20px;
     width: 100%;
     color: #FFF;
+    z-index: 2;
 }
 
 header nav {
@@ -112,9 +113,9 @@ header nav .links .btns .login {
 /* mobile nav btn */
 .mobileNavBtn {
     position: absolute;
-    top: 20px;
+    top: 28%;
     right: 20px;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     cursor: pointer;
     transition: .5s;
 }
@@ -331,7 +332,7 @@ header nav .links .cart-btn .totalQuantity {
 }
 
 .about .left h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding: 0 20px;
     text-wrap: wrap;
 }
@@ -657,6 +658,7 @@ footer {
     border: none;
     transition: .5s;
     cursor: pointer;
+    padding: 0 3px;
 }
 
 .subscribe .email:hover button {

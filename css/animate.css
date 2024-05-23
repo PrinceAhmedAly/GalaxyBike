@@ -16,6 +16,7 @@
   color: #FFF;
   text-decoration: none;
   transition: .5s;
+  z-index: 2;
 }
 
 .main-slider a:hover {
@@ -85,6 +86,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 
 .indicator {
