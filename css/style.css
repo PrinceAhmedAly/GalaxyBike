@@ -651,6 +651,7 @@ footer {
 
 .email button {
     width: 100px;
+    min-width: fit-content;
     background-color: #747868;
     color: #FFF;
     border: none;
