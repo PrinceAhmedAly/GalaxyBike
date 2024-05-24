@@ -102,7 +102,7 @@
 }
 
 /* Loader Styles */
-#loader {
+/* #loader {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -112,10 +112,22 @@
   border-top: 5px solid #3498db;
   border-radius: 50%;
   animation: spin 1s linear infinite;
-  z-index: 9999; /* Ensure it stays on top */
+  z-index: 9999; 
   transform: translate(-50%, -50%);
+} */
+
+#loader {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+#loader img {
+  width: 150px;
+  height: auto;
+}
 @keyframes spin {
   0% {
     transform: rotate(0deg);
