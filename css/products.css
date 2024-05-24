@@ -115,7 +115,7 @@ header nav .btns {
     align-items: center;
     position: absolute;
     top: 25%;
-    right: 10%;
+    right: 13%;
 }
 
 header nav .btns .login {
@@ -264,10 +264,9 @@ header nav .cart-btn .totalQuantity {
 }
 
 .cart .checkOut {
-    width: 27%;
+    width: 100%;
     height: 50px;
-    background-color: #94B618;
-    position: fixed;
+    position: absolute;
     bottom: 0;
 }
 
@@ -287,6 +286,7 @@ header nav .cart-btn .totalQuantity {
     color: #FFF;
     border: none;
 }
+
 .landing .cart ul {
     margin: 0;
     padding: 0;
@@ -333,6 +333,7 @@ header nav .cart-btn .totalQuantity {
     cursor: pointer;
 }
 
+
 /* main title on products page */
 .product-title {
     position: absolute;
@@ -377,6 +378,7 @@ header nav .cart-btn .totalQuantity {
     box-shadow: 3px 3px 10px #e9eddf;
 }
 
+
 .link {
     flex: 1;
     display: flex;
@@ -385,6 +387,10 @@ header nav .cart-btn .totalQuantity {
     height: 50px;
     cursor: pointer;
     transition: .5s;
+}
+
+.link:not(:last-child) {
+    border-right: 1px solid #94B618;;
 }
 
 .active {

@@ -137,6 +137,10 @@ header nav .links .btns .login {
     transition: .5s linear;
     display: none;
     padding: 7px 0;
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    width: 50%;
 }
 
 .mobile-links ul {
