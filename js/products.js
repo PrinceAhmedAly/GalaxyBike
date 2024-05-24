@@ -1,4 +1,3 @@
-
 // search bar btn
 function filterProducts() {
     var searchTerm = document.getElementById('search').value.toLowerCase();
@@ -16,13 +15,11 @@ function filterProducts() {
     };
 };
 
-
 // search input
 const search = document.getElementById("search");
 
 search.addEventListener("keyup", (e) => {
     e.preventDefault();
-
 
     var searchTerm = document.getElementById('search').value.toLowerCase();
     var products = document.querySelectorAll('.bike-card');
@@ -35,43 +32,31 @@ search.addEventListener("keyup", (e) => {
         } else {
             product.style.display = 'none'; // Hide non-matching products
         }
-    }
-    )
+    });
 });
 
-
 // data fetch
-// Fetch product data from JSON file
-// using ES6 fetch here instead of old xml requests
 fetch('products.json')
     .then(response => response.json())
     .then(products => {
-
-        // Get the container for products
         const productsContainer = document.querySelector('.bike-cards');
-
-        // Loop through each product and create HTML elements
         products.forEach(function (product) {
-            // Create HTML elements for the product card
             var productCard = document.createElement('div');
             productCard.className = `bike-card ${product.type}`; // Add the 'type' as an additional class
             productCard.innerHTML = `
                 <h4>${product.name}</h4>
                 <img src="${product.image}" alt="${product.name}">
                 <div class="add">
-                <i class="fa-solid fa-cart-plus" onclick="addToCart('${product.name}', '${product.image}', '${product.price}')"></i>
-                <i class="fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-cart-plus" onclick="addToCart('${product.name}', '${product.image}', '${product.price}')"></i>
+                    <i class="fa-solid fa-heart"></i>
                     <span class="price">${product.price}$</span>
                 </div>
-                `;
-
-            // Append the product card to the container
+            `;
             productsContainer.appendChild(productCard);
         });
     });
 
 // data filter
-
 document.addEventListener('DOMContentLoaded', function () {
     const filterBtns = document.querySelectorAll(".link");
     const productsContainer = document.getElementById("products-container");
@@ -91,9 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
-
-// the cart 
+// the cart
 let shoppingCart = document.getElementById("shoppingCart");
 let cartBtn = document.getElementById("cartBtn");
 let closeBtn = document.getElementById("closeBtn");
@@ -108,54 +91,84 @@ cartBtn.addEventListener('click', function () {
 
 // close cart btn
 closeBtn.addEventListener("click", function () {
-    shoppingCart.style.right = "-400px"
+    shoppingCart.style.right = "-100%"
 });
 
 closeBtn2.addEventListener("click", function () {
-    shoppingCart.style.right = "-400px"
+    shoppingCart.style.right = "-100%"
 });
 
-
 // add to cart function
-
 function addToCart(name, image, price) {
     const cartItemsContainer = document.getElementById('itemsContainer');
-    const cartItem = document.createElement('li');
-    cartItem.innerHTML = `
-        <img src="${image}" alt="${name}">
-        <div class="item-details">
-            <h3>${name}</h3>
-            <span class="price">${price}$</span>
-        </div>
-        <span class="itemRemove" onclick="removeCartItem(this)">
-        <i class="fa-solid fa-xmark"></i>
-        </span>
-    `;
-    cartItemsContainer.appendChild(cartItem);
+    const cartItems = cartItemsContainer.getElementsByTagName('li');
 
-    //total price update
-    updateTotalPrice();
+    // Check if the item already exists in the cart
+    for (let i = 0; i < cartItems.length; i++) {
+        const cartItemName = cartItems[i].querySelector('h3');
+        if (cartItemName && cartItemName.textContent === name) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Item Already in Cart',
+                text: `${name} is already in the cart.`,
+                showConfirmButton: false,
+                timer: 1500
+            });
+            return; // Exit the function if the item already exists
+        }
+    }
 
-    // Add the item to local storage
-    addToLocalStorage(name, image, price);
+    // Check if price is 0
+    if (price <= 0) {
+        const cartItem = document.createElement('li');
+        cartItem.textContent = "There is no items in the cart";
+        // Remove all existing items in the cart container
+        while (cartItemsContainer.firstChild) {
+            cartItemsContainer.removeChild(cartItemsContainer.firstChild);
+        }
+        cartItemsContainer.appendChild(cartItem);
+    } else {
+        // Remove the "no items" message if it exists
+        if (cartItems.length === 1 && cartItems[0].textContent === "There is no items in the cart") {
+            cartItemsContainer.removeChild(cartItems[0]);
+        }
 
-    // Update the total quantity
-    updateTotalQuantity()
+        const cartItem = document.createElement('li');
+        cartItem.innerHTML = `
+            <img src="${image}" alt="${name}">
+            <div class="item-details">
+                <h3>${name}</h3>
+                <span class="price">${price}$</span>
+            </div>
+            <span class="itemRemove" onclick="removeCartItem(this)">
+                <i class="fa-solid fa-xmark"></i>
+            </span>
+        `;
+        cartItemsContainer.appendChild(cartItem);
 
-    Swal.fire({
-        icon: 'success',
-        title: 'Added to Cart!',
-        text: `${name} has been added to the cart successfully!`,
-        showConfirmButton: false,
-        timer: 1500
-    });
+        // Add the item to local storage
+        addToLocalStorage(name, image, price);
+
+        // Update the total price
+        updateTotalPrice();
+
+        // Update the total quantity
+        updateTotalQuantity();
+
+        Swal.fire({
+            icon: 'success',
+            title: 'Added to Cart!',
+            text: `${name} has been added to the cart successfully!`,
+            showConfirmButton: false,
+            timer: 1500
+        });
+    }
 }
 
-
 // total price
-
 function removeCartItem(button) {
     const cartItem = button.parentElement;
+    const cartItemsContainer = cartItem.parentElement;
     const name = cartItem.querySelector('h3').textContent;
 
     // Remove the item from local storage
@@ -169,6 +182,13 @@ function removeCartItem(button) {
     // Update the total price after removing the item
     updateTotalPrice();
 
+    // Show "no items" message if the cart is empty
+    if (cartItemsContainer.children.length === 0) {
+        const emptyMessage = document.createElement('li');
+        emptyMessage.textContent = "There is no items in the cart";
+        cartItemsContainer.appendChild(emptyMessage);
+    }
+
     Swal.fire({
         icon: 'success',
         title: 'Removed From Cart!',
@@ -177,7 +197,6 @@ function removeCartItem(button) {
         timer: 1500
     });
 }
-
 
 function updateTotalPrice() {
     const totalPriceElement = document.getElementById('totalPrice');
@@ -202,17 +221,13 @@ function updateTotalPrice() {
 
 updateTotalPrice();
 
-
-
 // localstorage cart items saving
-
 function addToLocalStorage(name, image, price) {
     let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
     cartItems.push({ name, image, price });
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
 }
-
 
 // Function to remove item from local storage
 function removeFromLocalStorage(name) {
@@ -223,7 +238,6 @@ function removeFromLocalStorage(name) {
 
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
 }
-
 
 // Update the total quantity
 function updateTotalQuantity() {
@@ -236,14 +250,6 @@ function updateTotalQuantity() {
 
 // Initial update of total quantity when the page loads
 updateTotalQuantity();
-
-//
-window.onload = function () {
-    loadCartItemsFromLocalStorage();
-    updateTotalPrice();
-    updateTotalQuantity();
-};
-
 
 // Function to load items from local storage
 function loadCartItemsFromLocalStorage() {
@@ -262,25 +268,37 @@ function loadCartItemsFromLocalStorage() {
                 <h3>${item.name}</h3>
                 <span class="price">${item.price}$</span>
             </div>
-            <span class="itemRemove" onclick="removeCartItem(this)">X</span>
+            <span class="itemRemove" onclick="removeCartItem(this)">
+                <i class="fa-solid fa-xmark"></i>
+            </span>
         `;
         cartItemsContainer.appendChild(cartItem);
     });
+
+    // Show "no items" message if the cart is empty
+    if (cartItemsContainer.children.length === 0) {
+        const emptyMessage = document.createElement('li');
+        emptyMessage.textContent = "There is no items in the cart";
+        cartItemsContainer.appendChild(emptyMessage);
+    }
 }
 
+// Load cart items from local storage on page load
+window.onload = function () {
+    loadCartItemsFromLocalStorage();
+    updateTotalPrice();
+    updateTotalQuantity();
+};
 
-/// login functions
-
+// login functions
 document.addEventListener("DOMContentLoaded", function () {
     let loginBtn = document.getElementById("loginBtn");
 
     if (loginBtn) {
-      loginBtn.addEventListener("click", () => {
-        location.href = "login.html";
-      });
+        loginBtn.addEventListener("click", () => {
+            location.href = "login.html";
+        });
     } else {
-      console.error("Element with id 'loginBtn' not found.");
+        console.error("Element with id 'loginBtn' not found.");
     }
-  });
-
-
+});

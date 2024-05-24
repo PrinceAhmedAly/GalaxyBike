@@ -1,6 +1,7 @@
 /* stylesheet file for products page */
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 * {
@@ -235,9 +236,9 @@ header nav .cart-btn .totalQuantity {
     position: absolute;
     position: relative;
     position: fixed;
-    right: -400px;
+    right: -100%;
     /* right: 0; */
-    width: 400px;
+    width: 100%;
     height: 100vh;
     z-index: 3;
     background-color: #f6f1f1;
@@ -253,7 +254,7 @@ header nav .cart-btn .totalQuantity {
 .cart #closeBtn {
     position: absolute;
     right: 15px;
-    top: 10px;
+    top: 3%;
     font-size: 1.5rem;
     transition: .5s;
     cursor: pointer;
