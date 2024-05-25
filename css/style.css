@@ -336,8 +336,8 @@ header nav .links .cart-btn .totalQuantity {
 }
 
 .about .left h3 {
-    font-size: 1.1rem;
-    padding: 0 20px;
+    font-size: 1rem;
+    padding: 0 10px;
     text-wrap: wrap;
 }
 
@@ -349,7 +349,7 @@ header nav .links .cart-btn .totalQuantity {
 }
 
 .about .right h1 {
-    font-size: 6rem;
+    font-size: 5rem;
     display: inline;
     color: #D6CEB8;
     position: relative;
@@ -383,6 +383,7 @@ header nav .links .cart-btn .totalQuantity {
     justify-content: center;
     align-items: flex-start;
 }
+
 .main-info .content h2 {
     font-size: 2rem;
 }
@@ -421,8 +422,9 @@ header nav .links .cart-btn .totalQuantity {
     padding-top: 20px;
     overflow: hidden;
 }
+
 .products h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 
 .road {
